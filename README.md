@@ -89,5 +89,8 @@ https://www.freertos.org/FreeRTOS_Support_Forum_Archive/March_2016/freertos_Atom
 ### Rule 10.
 - Compile with strong warnings enabled and use static analysis tools.
 
+### Hardest Rule to follow
+The rule I would find hardest to follow is Rule 2. In previous classes, many of the programs on the MSP430 used loops that ran until a condition changed or used infinite loops as part of the main structure. Because of that, I did not spend much time thinking about the maximum time a loop could run. Working with the ESP32 and learning more about real-time systems has allowed me to see how a long-running loop could affect system timing. To follow this rule better, I would need to design loops with clear limits and exit conditions instead of assuming they’ll eventually finish. I would also spend more time considering whether breaking a large task into smaller pieces would make the system easier to maintain.
+
 ### Citation
 https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code
